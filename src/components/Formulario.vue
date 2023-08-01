@@ -1,6 +1,7 @@
 <script setup>
     const props = defineProps(['cadastraTarefa', 'tarefaTemp', 'trocarFiltro', 'editaTarefaTemp'])
 </script>
+
 <template>
     <form @submit.prevent="props.cadastraTarefa">
         <div class="row">

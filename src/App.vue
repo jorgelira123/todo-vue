@@ -1,8 +1,8 @@
 <script setup>
   import { reactive } from 'vue';
-  import Cabecalho from "./components/Cabecalho.vue";
-  import Formulario from "./components/Formulario.vue";
-  import ListaDeTarefas from "./components/ListaDeTarefas.vue";
+  import Cabecalho from './components/Cabecalho.vue';
+  import Formulario from './components/Formulario.vue';
+  import ListaDeTarefas from './components/ListaDeTarefas.vue';
 
   const estado = reactive({
     filtro: 'todas',
@@ -19,7 +19,7 @@
       {
         titulo: 'Ir pra academia',
         finalizada: true,
-      },
+      }
     ]
   })
 
@@ -37,6 +37,7 @@
     switch (filtro) {
       case 'pendentes':
         return getTarefasPendentes();
+
       case 'finalizadas':
         return getTarefasFinalizadas();
     
@@ -46,11 +47,11 @@
   }
 
   const cadastraTarefa = () => {
-    const tarefaNova = {
+    const novaTarefa = {
       titulo: estado.tarefaTemp,
       finalizada: false,
     }
-    estado.tarefas.push(tarefaNova);
+    estado.tarefas.push(novaTarefa);
     estado.tarefaTemp = '';
   }
 </script>
